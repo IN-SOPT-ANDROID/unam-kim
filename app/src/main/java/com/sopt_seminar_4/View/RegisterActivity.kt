@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt_seminar_4.Data.API.ApiGetUserList
 import com.sopt_seminar_4.Data.API.ApiLoginRegister
@@ -49,7 +50,8 @@ class RegisterActivity : AppCompatActivity() {
                         )
                     }
                         .onSuccess {
-                            Log.d(ContentValues.TAG, "${it.body()?.status}")
+                            Log.d(ContentValues.TAG, "success")
+                            Toast.makeText(this@RegisterActivity, "${it.body()!!.message}", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
 
                         }

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.sopt_seminar_4.Data.API.ApiLoginRegister
 import com.sopt_seminar_4.Data.DTO.LoginDTO.RequestLoginDTO
 import com.sopt_seminar_4.Data.Service.LoginService
@@ -48,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                         .onSuccess {
                             Log.d(ContentValues.TAG, "success")
+                            Toast.makeText(this@LoginActivity, "${it.body()!!.message}", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@LoginActivity, ResultActivity::class.java))
                         }
                         .onFailure {
