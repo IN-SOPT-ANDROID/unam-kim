@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                         .onSuccess {
                             Log.d(ContentValues.TAG, "success")
-//                            recyclerAdapter.submitList(it.body()?.items)
+                            startActivity(Intent(this@LoginActivity, ResultActivity::class.java))
                         }
                         .onFailure {
                             Log.d(ContentValues.TAG, "fail")
