@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Welaaa Color -->
+    <color name="welaaa_grey_100">#F7F7F7</color>
+    <color name="welaaa_grey_200">#F0F0F0</color>
+    <color name="welaaa_grey_300">#D9D9D9</color>
+    <color name="welaaa_grey_400">#ACACAC</color>
+    <color name="welaaa_grey_600">#767676</color>
+    <color name="welaaa_grey_800">#444444</color>
+    <color name="welaaa_grey_900">#111111</color>
+    <color name="welaaa_logo_green">#01C73C</color>
+
+    <!-- Home Color -->
+    <color name="home_green">#2A4C4F</color>
+    <color name="home_pink">#D09694</color>
 </resources>

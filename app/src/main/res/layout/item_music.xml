@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="music"
+            type="com.seminar7.data.model.ResponseGetMusicDto.Data" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="9dp"
+        tools:context=".presentation.view.ResultActivity">
+
+        <View
+            android:id="@+id/frame_playlist_text"
+            android:layout_width="198dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/radius_frame_playlist_text"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/frame_playlist"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist" />
+
+        <TextView
+            android:id="@+id/tv_music_title"
+            android:layout_width="106dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="5sp"
+            android:outlineProvider="none"
+            android:text="@{music.title}"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist_text"
+            app:layout_constraintTop_toTopOf="@id/frame_playlist_text"
+            tools:text="music_title" />
+
+        <TextView
+            android:id="@+id/tv_music_singer"
+            android:layout_width="56dp"
+            android:layout_height="22dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="5sp"
+            android:outlineProvider="none"
+            android:text="@{music.singer}"
+            app:layout_constraintStart_toStartOf="@id/tv_music_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_music_title"
+            tools:text="singer" />
+
+        <View
+            android:id="@+id/frame_playlist"
+            android:layout_width="220dp"
+            android:layout_height="105dp"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/frame_playlist_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/home_circle_frame"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_playlist_item"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            app:musicImageCircle="@{music.image}"
+            app:layout_constraintBottom_toBottomOf="@id/frame_playlist_item"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist_item"
+            app:layout_constraintStart_toStartOf="@id/frame_playlist_item"
+            app:layout_constraintTop_toTopOf="@id/frame_playlist_item"
+            tools:src="@drawable/music_profile_image" />
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:background="@drawable/home_circle_button"
+            android:elevation="4dp"
+            android:src="@drawable/ic_home_play"
+            app:layout_constraintBottom_toBottomOf="@id/iv_playlist_item"
+            app:layout_constraintStart_toStartOf="@id/iv_playlist_item"
+            app:layout_constraintTop_toTopOf="@id/iv_playlist_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
