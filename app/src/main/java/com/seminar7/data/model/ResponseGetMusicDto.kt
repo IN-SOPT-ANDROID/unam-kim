@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ResponseGetMusicDto(
     @SerialName("data")
-    val `data`: List<Data>,
+    val data: List<Data>,
     @SerialName("message")
     val message: String,
     @SerialName("statusCode")

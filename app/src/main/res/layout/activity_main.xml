@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="mainMusic"
+            name="viewmodel"
             type="com.seminar7.presentation.viewmodel.MusicViewModel" />
     </data>
 
@@ -27,6 +27,7 @@
 
 
         <EditText
+            android:onTextChanged="@{viewmodel::onTitleTextChanged}"
             android:hint="music_title"
             android:id="@+id/et_music_title"
             android:layout_width="150dp"
@@ -35,6 +36,7 @@
             app:layout_constraintTop_toBottomOf="@id/iv_music_profile" />
 
         <EditText
+            android:onTextChanged="@{viewmodel::onSingerTextChanged}"
             android:hint="music_singer"
             app:layout_constraintStart_toStartOf="@id/et_music_title"
             app:layout_constraintTop_toBottomOf="@id/et_music_title"
